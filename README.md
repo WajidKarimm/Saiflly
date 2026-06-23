@@ -2,7 +2,7 @@
 
 A comprehensive property evaluation platform that combines AI, geospatial data, and safety analytics to provide intelligent property recommendations for buyers, renters, and investors.
 
-## 🎯 Core Value Proposition
+##  Core Value Proposition
 
 Every property listing gets an **overall safety intelligence score** built from 4 weighted sub-scores:
 - **Property History Score** (25%): Ownership disputes, legal issues, flood events
@@ -40,7 +40,7 @@ The AI then generates a **plain-language verdict**: **RENT**, **BUY**, **AVOID**
 └──────────────────────────────────────────┘
 ```
 
-## 📋 Project Structure
+##  Project Structure
 
 ```
 nestsafely/
@@ -99,7 +99,7 @@ nestsafely/
 └── .gitignore
 ```
 
-## 🔄 5-Phase Implementation Plan
+##  5-Phase Implementation Plan
 
 ### Phase 1: Database Design ✅
 - PostgreSQL schema with PostGIS for geospatial queries
@@ -164,20 +164,20 @@ Open [http://localhost:3000](http://localhost:3000)
 
 ## 🔒 Security First
 
-- ✅ JWT tokens with 1-hour expiry + refresh tokens
-- ✅ Bcrypt password hashing (12 rounds)
-- ✅ Parameterized SQL queries (no injection)
-- ✅ Rate limiting on all endpoints
-- ✅ CORS locked to approved domains
-- ✅ HTTPS enforced in production
-- ✅ Sensitive fields encrypted in database
-- ✅ Request validation with Zod
-- ✅ CSRF protection for state-changing endpoints
-- ✅ Security headers (Helmet.js)
+-  JWT tokens with 1-hour expiry + refresh tokens
+-  Bcrypt password hashing (12 rounds)
+-  Parameterized SQL queries (no injection)
+-  Rate limiting on all endpoints
+-  CORS locked to approved domains
+-  HTTPS enforced in production
+-  Sensitive fields encrypted in database
+-  Request validation with Zod
+-  CSRF protection for state-changing endpoints
+-  Security headers (Helmet.js)
 
 See [SECURITY_GUIDELINES.md](docs/SECURITY_GUIDELINES.md) for complete checklist.
 
-## 📊 Tech Stack
+## --- Tech Stack
 
 | Layer | Technology | Version |
 |-------|------------|---------|
