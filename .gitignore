@@ -1,0 +1,74 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production.local
+
+# Dependencies
+node_modules/
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+.nyc_output/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+
+# Testing
+.jest-cache/
+.mocha_instances
+
+# OS
+Thumbs.db
+.env.test
+.env.test.local
+
+# Database
+*.sqlite
+*.db
+
+# Temp files
+*.tmp
+.tmp/
+temp/
+
+# Docker
+.dockerignore
+
+# CI/CD
+.github/workflows/secrets.yml
+
+# Secrets (if accidentally committed)
+*.pem
+*.key
+private_key
+secret_*
