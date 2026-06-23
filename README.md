@@ -162,7 +162,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000)
 
-## 🔒 Security First
+## 🔒 Security 
 
 -  JWT tokens with 1-hour expiry + refresh tokens
 -  Bcrypt password hashing (12 rounds)
