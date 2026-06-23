@@ -133,7 +133,7 @@ nestsafely/
 - Responsive design (mobile-first)
 - See: [Frontend README](frontend/README.md)
 
-## 🚀 Quick Start
+## --- Quick Start
 
 ### Prerequisites
 - Node.js 18+
