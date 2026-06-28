@@ -1,6 +1,6 @@
 # NestSafely - Property Safety Intelligence Platform
 
-A comprehensive property evaluation platform that combines AI, geospatial data, and safety analytics to provide intelligent property recommendations for buyers, renters, and investors.
+A comprehensive property evaluation platform that combines AI geospatial data, and safety analytics to provide intelligent property recommendations for buyers, renters, and investors.
 
 ##  Core Value Proposition
 
