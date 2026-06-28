@@ -156,7 +156,7 @@ See [SECURITY_GUIDELINES.md](docs/SECURITY_GUIDELINES.md) for complete checklist
 | External Data | Google Places API, NADRA, NDMA | - |
 | Deployment | Vercel (frontend), Railway/Render (backend) | - |
 
-## 📚 Documentation
+##  Documentation
 
 1. **[ARCHITECTURE.md](docs/ARCHITECTURE.md)** - System architecture & data flow
 2. **[DATABASE_SCHEMA.md](docs/DATABASE_SCHEMA.md)** - PostgreSQL schema design
