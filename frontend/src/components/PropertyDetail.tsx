@@ -3,7 +3,8 @@
 import { PropertyDetail as PropertyDetailType, AIVerdict } from '../types';
 import { SafetyBadge } from './SafetyBadge';
 import { ScoreMeters } from './ScoreMeters';
-import { formatCurrency, formatPropertyType } from '../lib/utils/formatting';
+import { formatPropertyType } from '../lib/utils/formatting';
+import { formatCurrency } from '../lib/utils/helpers';
 import { Button } from './common/Button';
 
 interface PropertyDetailProps {

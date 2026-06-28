@@ -63,7 +63,7 @@ export const getPropertyDetail = async (
     const safetyScore = await databaseService.getSafetyScore(id) ||
       (await scoringService.calculateSafetyScore(id, property.latitude, property.longitude));
 
-    const aiVerdict = await aiVerdictService.generateAIVerdict(property.address, safetyScore);
+    const aiVerdict = await aiVerdictService.generateAIVerdict(property.address, safetyScore as any);
 
     res.status(200).json({
       success: true,

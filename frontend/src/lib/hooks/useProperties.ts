@@ -8,7 +8,7 @@ import { PropertyWithScore } from '../../types';
 export const useProperties = (latitude: number, longitude: number, radiusKm: number = 5) => {
   const [page, setPage] = useState(1);
 
-  const { data, isLoading, error, isPreviousData, refetch } = useQuery({
+  const { data, isLoading, error, isPlaceholderData, refetch } = useQuery({
     queryKey: ['properties', latitude, longitude, radiusKm, page],
     queryFn: () => apiClient.searchProperties(latitude, longitude, radiusKm, page),
     staleTime: 5 * 60 * 1000, // 5 minutes
@@ -32,7 +32,7 @@ export const useProperties = (latitude: number, longitude: number, radiusKm: num
     pagination: data?.data?.pagination,
     isLoading,
     error,
-    isPreviousData,
+    isPlaceholderData,
     page,
     nextPage,
     prevPage,

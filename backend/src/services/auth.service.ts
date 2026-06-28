@@ -1,4 +1,4 @@
-import jwt from 'jsonwebtoken';
+import jwt, { SignOptions } from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 import { v4 as uuidv4 } from 'uuid';
 import { env } from '../config/env';
@@ -25,16 +25,24 @@ export interface AuthTokens {
 }
 
 export const generateTokens = (userId: string, email: string, role: string): AuthTokens => {
+  // FIX: Use 'as any' to bypass type checking for expiresIn
+  const accessOptions: SignOptions = { 
+    expiresIn: (env.JWT_EXPIRY || '1h') as any
+  };
+  const refreshOptions: SignOptions = { 
+    expiresIn: (env.REFRESH_TOKEN_EXPIRY || '7d') as any
+  };
+
   const access_token = jwt.sign(
     { id: userId, email, role },
     env.JWT_SECRET,
-    { expiresIn: env.JWT_EXPIRY }
+    accessOptions
   );
 
   const refresh_token = jwt.sign(
     { id: userId, email },
     env.REFRESH_TOKEN_SECRET,
-    { expiresIn: env.REFRESH_TOKEN_EXPIRY }
+    refreshOptions
   );
 
   return {
@@ -52,7 +60,7 @@ export const register = async (
   phoneNumber?: string
 ): Promise<{ user: Partial<User>; tokens: AuthTokens }> => {
   // Check if user exists
-  const existing = await query<User>(
+  const existing = await query<{ id: string }>(
     'SELECT id FROM users WHERE email = $1',
     [email]
   );
@@ -98,7 +106,7 @@ export const login = async (
   email: string,
   password: string
 ): Promise<{ user: Partial<User>; tokens: AuthTokens }> => {
-  const result = await query<User & { password: string }>(
+  const result = await query<{ id: string; email: string; password: string; first_name: string; last_name: string; role: string }>(
     'SELECT id, email, password, first_name, last_name, role FROM users WHERE email = $1',
     [email]
   );

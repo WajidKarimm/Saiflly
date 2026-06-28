@@ -1,4 +1,4 @@
-import { Pool, QueryResult } from 'pg';
+import { Pool, QueryResult, QueryResultRow } from 'pg';
 import { env } from './env';
 import logger from '../utils/logger';
 
@@ -17,7 +17,8 @@ pool.on('error', (err) => {
   logger.error('Unexpected error on idle client', err);
 });
 
-export const query = async <T = any>(
+// FIX: Added extends QueryResultRow to the generic type
+export const query = async <T extends QueryResultRow = any>(
   text: string,
   params?: any[]
 ): Promise<QueryResult<T>> => {
@@ -33,7 +34,8 @@ export const query = async <T = any>(
   }
 };
 
-export const queryOne = async <T = any>(
+// FIX: Added extends QueryResultRow to these functions too
+export const queryOne = async <T extends QueryResultRow = any>(
   text: string,
   params?: any[]
 ): Promise<T | null> => {
@@ -41,7 +43,7 @@ export const queryOne = async <T = any>(
   return result.rows[0] || null;
 };
 
-export const queryMany = async <T = any>(
+export const queryMany = async <T extends QueryResultRow = any>(
   text: string,
   params?: any[]
 ): Promise<T[]> => {
