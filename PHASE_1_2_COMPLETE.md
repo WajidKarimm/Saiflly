@@ -25,7 +25,7 @@ Both **Phase 1 (Backend API)** and **Phase 2 (Frontend)** are now feature-comple
 - Authentication middleware (JWT + optional auth)
 - Input validation middleware (Zod schemas)
 
-#### ✅ API Endpoints (All 20+ Endpoints)
+####  API Endpoints (All 20+ Endpoints)
 **Authentication**
 - `POST /auth/register` - User registration with bcrypt hashing
 - `POST /auth/login` - User login with JWT tokens
