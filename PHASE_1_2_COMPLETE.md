@@ -6,11 +6,11 @@ Both **Phase 1 (Backend API)** and **Phase 2 (Frontend)** are now feature-comple
 
 ---
 
-## ✅ WHAT'S BEEN COMPLETED
+##  WHAT'S BEEN COMPLETED
 
 ### Phase 1: Database & Backend API (100%)
 
-#### ✅ Database Layer
+####  Database Layer
 - PostgreSQL schema with 10 core tables (users, properties, safety_scores, property_history, area_data, facilities, saved_properties, refresh_tokens, audit_log, api_requests)
 - PostGIS geospatial extensions enabled
 - All indexes optimized (GIST, BRIN, B-tree)
